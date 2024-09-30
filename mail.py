@@ -62,8 +62,8 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         st.dataframe(diff)
         df = diff.head(5)
         df_html = df.to_html(index=False)
-        diff.to_csv("/home/micro2/Desktop/mail/data.csv")  
-        attachments = ["/home/micro2/Desktop/mail/data.csv"]
+        diff.to_csv("data.csv")  
+        attachments = ["data.csv"]
         title = st.text_input("Enter_Subject")
         st.write("Subject", title)
         if st.button("Send Email"):
