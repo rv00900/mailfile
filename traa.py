@@ -126,8 +126,7 @@ dr.drop(dr.index[0], inplace=True)
 #dr["file"] = dr["merge"].apply(lambda x: "book" if x == "right_only" else "data")
 print(dr)
 dr.to_csv("test.csv")
-a =dr.to_csv("test.csv")
-print(a)
+
 
 
 
