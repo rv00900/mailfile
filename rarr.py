@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 from io import StringIO
 
-def send_internal_email(subject=None, body=None, to_email,cc_email=None, attachments=None):
+def send_internal_email(subject, body, to_email,cc_email=None, attachments=None):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     from_email = "rsingh@quantboxtrading.com"
