@@ -168,7 +168,7 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
             send_internal_email(
                 subject=f'{title}',
                 body=df_html,
-                to_email=["7081300205a@gmail.com","quantbox7@gmail.com"],
+                to_email=["avinash@microcurvetrading.com","rsingh@quantboxtrading.com"],
                 attachments=attachments
             )
             st.success("Email sent successfully!")
