@@ -4,6 +4,17 @@ import snowflake.connector
 
 from streamlit import runtime
 from streamlit.runtime.scriptrunner import get_script_run_ctx
+import streamlit as st
+from streamlit.server.server import Server
+from streamlit.report_thread import get_report_ctx
+
+session_id = get_report_ctx().session_id
+session_info = Server.get_current()._get_session_info(session_id)
+if session_info.ws is None:  # at first page load, this is None
+    st.markdown("Unable to get session websocket. Try refreshing the page.")
+    st.stop()
+headers = session_info.ws.request.headers
+st.write(headers)
 
 
 def get_remote_ip() -> str:
