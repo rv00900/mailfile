@@ -5,12 +5,15 @@ import snowflake.connector
 from streamlit import runtime
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 import streamlit as st
-
-import request
+import requests
 
 def index():
-    user_ip = request.remote_addr
-
+    # Using an external service to get the user's IP address
+    ip_url = 'https://api64.ipify.org?format=json'
+    response = requests.get(ip_url)
+    
+    if response.status_code == 200:
+        user_ip = response.json()['ip']
 
 def get_remote_ip() -> str:
 
