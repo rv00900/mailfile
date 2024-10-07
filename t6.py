@@ -5,8 +5,7 @@ import snowflake.connector
 from streamlit import runtime
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 import streamlit as st
-from streamlit.server.server import Server
-from streamlit.report_thread import get_report_ctx
+
 import request
 
 def index():
