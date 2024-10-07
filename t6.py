@@ -14,6 +14,7 @@ def index():
     
     if response.status_code == 200:
         user_ip = response.json()['ip']
+        return user_ip
 
 def get_remote_ip() -> str:
 
