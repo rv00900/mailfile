@@ -1,0 +1,5 @@
+smtplib
+email
+pandas
+streamlit
+snowflake-connector-python
