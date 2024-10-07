@@ -21,7 +21,8 @@ def get_remote_ip() -> str:
         return None
 
     return session_info.request.remote_ip
-
+r =get_remote_ip()
+print(r)
 a =(datetime.datetime.now())
 
 conn = snowflake.connector.connect(
