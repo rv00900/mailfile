@@ -6,6 +6,12 @@ from streamlit import runtime
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 import streamlit as st
 import requests
+import socket
+hostname = socket.gethostname()
+IPAddr = socket.gethostbyname(hostname)
+
+print("Your Computer Name is:" + hostname)
+print("Your Computer IP Address is:" + IPAddr)
 
 def index():
     # Using an external service to get the user's IP address
